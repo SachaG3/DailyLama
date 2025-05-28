@@ -2,7 +2,7 @@ import { getDB } from '../config/database.js'
 
 export const name = 'lama'
 
-export async function execute(message, client) {
+export async function execute(message) {
   const db = getDB()
   const discordId = message.author.id
   const today = new Date().toISOString().slice(0, 10)

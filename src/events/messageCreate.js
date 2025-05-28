@@ -14,6 +14,5 @@ export async function execute(message, client) {
   if (message.content === '!lamarank') {
     const { execute } = await import('../commands/lamarank.js')
     await execute(message, client)
-    return
   }
 } 
