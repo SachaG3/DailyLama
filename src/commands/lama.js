@@ -2,10 +2,16 @@ import { getDB } from '../config/database.js'
 
 export const name = 'lama'
 
-export async function execute(message) {
+function getLocalDate() {
+  const now = new Date()
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset())
+  return now.toISOString().slice(0, 10)
+}
+
+export async function execute(message, client) {
   const db = getDB()
   const discordId = message.author.id
-  const today = new Date().toISOString().slice(0, 10)
+  const today = getLocalDate()
   const [rows] = await db.query('SELECT * FROM DailyLame WHERE discord_id = ? AND date_obtention = ?', [discordId, today])
   if (rows.length > 0) {
     const [countRows] = await db.query('SELECT COUNT(*) as count FROM DailyLame WHERE discord_id = ?', [discordId])
