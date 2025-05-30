@@ -1,0 +1,15 @@
+{
+  "userAnswers": {},
+  "globalAnswers": [
+    {
+      "answer": "https://tenor.com/view/repo-repo-game-i-love-malcom-todd-chest-pain-i-love-gif-2148783786257423901",
+      "mode": "contains",
+      "word": "REPO"
+    },
+    {
+      "answer": "https://tenor.com/view/feur-theobabac-quoi-gif-24294658",
+      "mode": "contains",
+      "word": "quoi"
+    }
+  ]
+}

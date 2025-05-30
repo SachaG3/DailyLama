@@ -1,6 +1,7 @@
 import { getDB } from '../config/database.js'
 
 export const name = 'lama'
+export const description = 'Récupère ton lama du jour et affiche combien tu en as.'
 
 function getLocalDate() {
   const now = new Date()
